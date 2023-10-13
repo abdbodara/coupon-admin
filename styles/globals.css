@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.table-user-main thead tr th,
+.table-user-main tbody tr td {
+  padding: 15px 8px;
+  vertical-align: top;
+  font-size: 14px;
+  font-weight: 600;
+  color: #9c9c9c;
+  text-transform: uppercase;
+  border-right: 1px solid #efefef;
+}
+
+.table-user-main thead,
+.table-user-main tbody tr {
+  border-bottom: 1px solid #efefef;
+}
+
+.table-user-main tbody tr td {
+  font-weight: 500;
+  vertical-align: middle;
+  text-transform: unset;
+}
+
+.table-user-main tbody tr:nth-child(odd) {
+  background-color: #fafafa;
+}
+
+.table-user-main tbody tr td.blue {
+  color: #8db7d6;
+  font-weight: 600;
+}
+
+.categories-form-main input:focus,
+.categories-form-main select:focus {
+  outline: none;
+}
+
+/* loader */
+
+.spinner {
+  width: 56px;
+  height: 56px;
+  display: grid;
+  border: 4.5px solid #0000;
+  border-radius: 50%;
+  border-color: #ffffff #0000;
+  animation: spinner-e04l1k 1s infinite linear;
+}
+
+.spinner::before,
+.spinner::after {
+  content: "";
+  grid-area: 1/1;
+  margin: 2.2px;
+  border: inherit;
+  border-radius: 50%;
+}
+
+.spinner::before {
+  border-color: #2e2e2e #0000;
+  animation: inherit;
+  animation-duration: 0.5s;
+  animation-direction: reverse;
+}
+
+.spinner::after {
+  margin: 8.9px;
+}
+
+@keyframes spinner-e04l1k {
+  100% {
+     transform: rotate(1turn);
+  }
+}
