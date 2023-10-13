@@ -47,17 +47,17 @@ const Coupon = () => {
     console.log("🚀 ~ file: index.js:93 ~ onSubmit ~ data:", data);
     const method = parsedData?._id ? "PUT" : "POST";
     const ID = parsedData?._id;
-    // update({ data, method, ID })
-    //   .unwrap()
-    //   .then((res) => {
-    //     router.push("/coupons");
-    //     toast.success(res?.message);
-    //     reset();
-    //   })
-    //   .catch((err) => {
-    //     toast.error(err?.data?.message);
-    //     reset();
-    //   });
+    update({ data, method, ID })
+      .unwrap()
+      .then((res) => {
+        router.push("/coupons");
+        toast.success(res?.message);
+        reset();
+      })
+      .catch((err) => {
+        toast.error(err?.data?.message);
+        reset();
+      });
     setSelectedCat("");
     reset();
   };
